@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "HTML", "CSS", "Tailwind CSS", "JavaScript"],
     githubUrl: "https://github.com/deepakkurella24/BrainBridgeFrontEnd",
     liveUrl: "https://github.com/deepakkurella24/BrainBridgeFrontEnd",
-    image: "/brainbridge.jpg",
+    image: `${import.meta.env.BASE_URL}brainbridge.jpg`,
   },
   {
     title: "HR \u2013 FLOW",
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
     tags: ["JavaScript", "HTML", "CSS", "TypeScript", "Node.js", "Express.js", "Tailwind CSS", "Gemini API"],
     githubUrl: "https://github.com/charankumarjamatara/HR-FLOW",
     liveUrl: "https://hr-floww.vercel.app/",
-    image: "/hrflow.png",
+    image: `${import.meta.env.BASE_URL}hrflow.png`,
   },
   {
     title: "Movix \u2013 Movie Website",
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
     tags: ["React.js", "next.js", "TypeScript", "Tailwind CSS", "TMDB API", "PostgreSQL"],
     githubUrl: "https://github.com/charankumarjamatara/movix",
     liveUrl: "https://movix-project1.vercel.app/",
-    image: "/movix.png",
+    image: `${import.meta.env.BASE_URL}movix.png`,
   },
 ];
 

@@ -10,7 +10,7 @@ export function Hero() {
       {/* Background Image / Portrait */}
       <div className="absolute inset-0 z-0 pointer-events-none flex items-end justify-end">
         <img
-          src="/profile.png"
+          src={`${import.meta.env.BASE_URL}profile.png`}
           alt="Charan Kumar Jamatara"
           className="h-[100%] w-[100%] object-contain object-right-bottom select-none"
         />
