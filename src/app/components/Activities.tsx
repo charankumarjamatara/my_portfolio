@@ -14,7 +14,7 @@ export function Activities() {
             <AnimatedCard
               key={item.title}
               index={index}
-              className="p-8 flex items-start gap-6 hover:border-blue-200 transform hover:-translate-y-1"
+              className="p-8 flex items-start gap-6 hover:border-orange-200 transform hover:-translate-y-1"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

@@ -17,20 +17,29 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group"
     >
       {/* Thumbnail area */}
-      <div className="h-56 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-blue-500/10 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
-          <div className="flex gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            <ActionButton icon={Github} label="View source" />
-            <ActionButton icon={ExternalLink} label="Live demo" />
+      <div className="h-56 bg-gray-100 relative overflow-hidden">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          /* Fallback initial */
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+            <div className="w-32 h-32 bg-white rounded-full shadow-sm flex items-center justify-center">
+              <span className="font-heading text-2xl font-bold text-gray-300">
+                {project.title.charAt(0)}
+              </span>
+            </div>
           </div>
-        </div>
-        {/* Fallback initial */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-32 h-32 bg-white rounded-full shadow-sm flex items-center justify-center">
-            <span className="font-heading text-2xl font-bold text-gray-300">
-              {project.title.charAt(0)}
-            </span>
+        )}
+
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
+          <div className="flex gap-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+            <ActionButton icon={Github} label="View source" href={project.githubUrl} />
+            <ActionButton icon={ExternalLink} label="Live demo" href={project.liveUrl} />
           </div>
         </div>
       </div>
@@ -56,17 +65,23 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 function ActionButton({
   icon: Icon,
   label,
+  href,
 }: {
   icon: typeof Github;
   label: string;
+  href?: string;
 }) {
+  if (!href) return null;
   return (
-    <button
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
-      className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-900 shadow-md hover:text-blue-500 hover:scale-110 transition-transform"
+      className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-900 shadow-md hover:text-orange-500 hover:scale-110 transition-transform"
     >
       <Icon className="w-5 h-5" />
-    </button>
+    </a>
   );
 }
 

@@ -1,1 +1,22 @@
 node_modules
+dist
+dist-ssr
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+

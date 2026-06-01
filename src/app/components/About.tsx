@@ -48,8 +48,8 @@ export function About() {
               </h3>
             </div>
             <div className="space-y-6">
-              <div className="border-l-2 border-blue-200 pl-6 relative">
-                <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1 ring-4 ring-white" />
+              <div className="border-l-2 border-orange-200 pl-6 relative">
+                <div className="absolute w-4 h-4 bg-orange-500 rounded-full -left-[9px] top-1 ring-4 ring-white" />
                 <h4 className="font-heading font-semibold text-gray-900 text-lg">
                   B.Tech in Computer Science
                 </h4>

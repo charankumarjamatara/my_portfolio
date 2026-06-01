@@ -7,13 +7,12 @@ export function Hero() {
       id="hero"
       className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white min-h-[90vh] flex items-center"
     >
-      {/* Background */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+      {/* Background Image / Portrait */}
+      <div className="absolute inset-0 z-0 pointer-events-none flex items-end justify-end">
         <img
-          src="https://images.unsplash.com/photo-1518718913060-947cd98c5550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG1pbmltYWwlMjBnZW9tZXRyeSUyMHdoaXRlJTIwYmx1ZXxlbnwxfHx8fDE3NzQzNDQ1NzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt=""
-          className="w-full h-full object-cover object-center"
-          loading="lazy"
+          src="/profile.png"
+          alt="Charan Kumar Jamatara"
+          className="h-[100%] w-[100%] object-contain object-right-bottom select-none"
         />
       </div>
 
@@ -29,15 +28,15 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-8 border border-blue-100 shadow-sm"
+            className="inline-flex items-center px-4 py-2 rounded-full bg-orange-50 text-orange-600 text-sm font-semibold mb-8 border border-orange-100 shadow-sm"
           >
-            <span className="flex h-2.5 w-2.5 rounded-full bg-blue-500 mr-2.5 animate-pulse" />
+            <span className="flex h-2.5 w-2.5 rounded-full bg-orange-500 mr-2.5 animate-pulse" />
             Available for new opportunities
           </motion.div>
 
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6">
-            Jamatara Charan{" "}
-            <span className="text-blue-500 relative inline-block">Kumar</span>
+            Charan Kumar{" "}
+            <span className="text-orange-500 relative inline-block">Jamatara</span>
           </h1>
 
           <h2 className="font-heading text-xl md:text-2xl text-gray-600 font-medium mb-8">
@@ -54,7 +53,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-xl text-white bg-blue-500 hover:bg-blue-600 shadow-md hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-xl text-white bg-orange-500 hover:bg-orange-600 shadow-md hover:shadow-xl hover:shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-1"
             >
               View Projects
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -35,7 +35,7 @@ export function Navbar() {
             href="#"
             className="font-heading text-xl font-bold tracking-tight text-gray-900"
           >
-            JCK<span className="text-blue-500">.</span>
+            JCK<span className="text-orange-500">.</span>
           </a>
 
           {/* Desktop links */}
@@ -46,8 +46,8 @@ export function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
                   activeSection === link.href.replace("#", "")
-                    ? "text-blue-500"
-                    : "text-gray-600 hover:text-blue-500"
+                    ? "text-orange-500"
+                    : "text-gray-600 hover:text-orange-500"
                 }`}
               >
                 {link.name}
@@ -56,7 +56,7 @@ export function Navbar() {
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors shadow-sm"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors shadow-sm"
             >
               Hire Me
             </a>
@@ -91,8 +91,8 @@ export function Navbar() {
                   onClick={closeMenu}
                   className={`block px-3 py-2.5 rounded-md text-base font-medium transition-colors ${
                     activeSection === link.href.replace("#", "")
-                      ? "text-blue-500 bg-blue-50"
-                      : "text-gray-600 hover:text-blue-500 hover:bg-gray-50"
+                      ? "text-orange-500 bg-orange-50"
+                      : "text-gray-600 hover:text-orange-500 hover:bg-gray-50"
                   }`}
                 >
                   {link.name}
@@ -101,7 +101,7 @@ export function Navbar() {
               <a
                 href="#contact"
                 onClick={closeMenu}
-                className="block mt-2 text-center px-4 py-2.5 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors"
+                className="block mt-2 text-center px-4 py-2.5 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg transition-colors"
               >
                 Hire Me
               </a>

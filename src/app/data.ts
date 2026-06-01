@@ -41,7 +41,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "Programming",
     icon: Terminal,
-    skills: ["C", "Python", "Java", "JS"],
+    skills: ["C", "Python", "Java"],
   },
   {
     title: "Web Technologies",
@@ -61,6 +61,9 @@ export interface Project {
   title: string;
   description: string;
   tags: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  image?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -68,19 +71,28 @@ export const PROJECTS: Project[] = [
     title: "BrainBridge \u2013 Peer Learning Platform",
     description:
       "Platform for students to connect with mentors and peers for knowledge sharing and collaboration. Fosters an interactive learning environment.",
-    tags: ["React", "Node.js", "Express", "MongoDB"],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "HTML", "CSS", "Tailwind CSS", "JavaScript"],
+    githubUrl: "https://github.com/deepakkurella24/BrainBridgeFrontEnd",
+    liveUrl: "https://github.com/deepakkurella24/BrainBridgeFrontEnd",
+    image: "/brainbridge.jpg",
   },
   {
-    title: "To-Do List App",
+    title: "HR \u2013 FLOW",
     description:
-      "A simple and efficient task management app with add, delete, and completion tracking features. Ensures you stay on top of your daily goals.",
-    tags: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+      "HR-FLOW is an autonomous, multi-agent AI platform designed to seamlessly automate the entire human resource workflow, from candidate screening and data-driven decision making to employee performance and leave management.",
+    tags: ["JavaScript", "HTML", "CSS", "TypeScript", "Node.js", "Express.js", "Tailwind CSS", "Gemini API"],
+    githubUrl: "https://github.com/charankumarjamatara/HR-FLOW",
+    liveUrl: "https://hr-floww.vercel.app/",
+    image: "/hrflow.png",
   },
   {
     title: "Movix \u2013 Movie Website",
     description:
       "A movie browsing web app that displays latest released movies and their details using REST API integration. Features search and filtering.",
-    tags: ["React", "Tailwind CSS", "TMDB API"],
+    tags: ["React.js", "next.js", "TypeScript", "Tailwind CSS", "TMDB API", "PostgreSQL"],
+    githubUrl: "https://github.com/charankumarjamatara/movix",
+    liveUrl: "https://movix-project1.vercel.app/",
+    image: "/movix.png",
   },
 ];
 

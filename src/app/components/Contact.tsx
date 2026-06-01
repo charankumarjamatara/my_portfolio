@@ -8,9 +8,9 @@ import { CONTACT_INFO, type ContactInfo } from "../data";
 
 /* ── Constants ─────────────────────────────────────────────────────── */
 
-const EMAILJS_SERVICE_ID = "service_xeytylf";
-const EMAILJS_TEMPLATE_ID = "template_mv4lf09";
-const EMAILJS_PUBLIC_KEY = "L7Szysma4SonHakck";
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
 
 /* ── Sub-components ────────────────────────────────────────────────── */
 
@@ -18,7 +18,7 @@ function ContactInfoItem({ item }: { item: ContactInfo }) {
   const content = item.href ? (
     <a
       href={item.href}
-      className="text-gray-600 hover:text-blue-500 transition-colors font-body"
+      className="text-gray-600 hover:text-orange-500 transition-colors font-body"
     >
       {item.value}
     </a>
@@ -31,7 +31,7 @@ function ContactInfoItem({ item }: { item: ContactInfo }) {
       <IconBox
         icon={item.icon}
         size="lg"
-        className="bg-white shadow-sm border border-gray-100 group-hover:bg-blue-50 transition-colors"
+        className="bg-white shadow-sm border border-gray-100 group-hover:bg-orange-50 transition-colors"
       />
       <div>
         <h4 className="font-heading font-semibold text-gray-900 text-lg mb-1">
@@ -61,7 +61,7 @@ function FormField({
   isTextarea = false,
 }: FormFieldProps) {
   const inputClasses =
-    "w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-500/10 focus:border-blue-500 focus:bg-white outline-none transition-all duration-300 font-body";
+    "w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 focus:bg-white outline-none transition-all duration-300 font-body";
 
   return (
     <div>
@@ -104,6 +104,12 @@ export function Contact() {
     e.preventDefault();
 
     if (!formRef.current) return;
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error("EmailJS environment variables are missing. If you just created the .env file, please restart your Vite development server (npm run dev).");
+      alert("Failed to send message: EmailJS configuration is missing. Please restart the development server.");
+      return;
+    }
 
     setSending(true);
 
@@ -162,14 +168,14 @@ export function Contact() {
                 id="name"
                 name="from_name"
                 label="Name"
-                placeholder="John Doe"
+                placeholder="Enter your name here"
               />
               <FormField
                 id="email"
                 name="from_email"
                 label="Email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder="Your_mail@example.com"
               />
               <FormField
                 id="message"
@@ -181,7 +187,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={sending}
-                className="w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-blue-500 hover:bg-blue-600 shadow-md hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1 mt-4 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-xl text-white bg-orange-500 hover:bg-orange-600 shadow-md hover:shadow-xl hover:shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-1 mt-4 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {sending ? "Sending..." : "Send Message"}
                 <Send className="ml-2 h-5 w-5" />

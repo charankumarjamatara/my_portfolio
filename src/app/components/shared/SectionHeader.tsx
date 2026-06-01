@@ -17,7 +17,7 @@ export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
       <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
         {title}
       </h2>
-      <div className="w-16 h-1.5 bg-blue-500 mx-auto rounded-full" />
+      <div className="w-16 h-1.5 bg-orange-500 mx-auto rounded-full" />
       {subtitle && (
         <p className="mt-8 text-gray-600 max-w-2xl mx-auto font-body">
           {subtitle}

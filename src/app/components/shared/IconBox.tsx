@@ -16,7 +16,7 @@ export function IconBox({ icon: Icon, size = "md", className = "" }: IconBoxProp
   const s = sizeMap[size];
   return (
     <div
-      className={`${s.box} bg-blue-50 text-blue-500 flex items-center justify-center flex-shrink-0 ${className}`}
+      className={`${s.box} bg-orange-50 text-orange-500 flex items-center justify-center flex-shrink-0 ${className}`}
     >
       <Icon className={s.icon} />
     </div>

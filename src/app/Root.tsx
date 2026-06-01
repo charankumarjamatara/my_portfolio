@@ -17,7 +17,7 @@ export default function Root() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-body selection:bg-blue-100 selection:text-blue-900">
+    <div className="min-h-screen bg-white text-gray-900 font-body selection:bg-orange-100 selection:text-orange-900">
       <Navbar />
       <main>
         <Hero />
