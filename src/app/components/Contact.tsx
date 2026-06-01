@@ -8,9 +8,9 @@ import { CONTACT_INFO, type ContactInfo } from "../data";
 
 /* ── Constants ─────────────────────────────────────────────────────── */
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "";
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
+const EMAILJS_SERVICE_ID = "service_xeytylf";
+const EMAILJS_TEMPLATE_ID = "template_mv4lf09";
+const EMAILJS_PUBLIC_KEY = "L7Szysma4SonHakck";
 
 /* ── Sub-components ────────────────────────────────────────────────── */
 
@@ -104,12 +104,6 @@ export function Contact() {
     e.preventDefault();
 
     if (!formRef.current) return;
-
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      console.error("EmailJS environment variables are missing. If you just created the .env file, please restart your Vite development server (npm run dev).");
-      alert("Failed to send message: EmailJS configuration is missing. Please restart the development server.");
-      return;
-    }
 
     setSending(true);
 
