@@ -7,8 +7,5 @@ export const router = createBrowserRouter(
       path: "/",
       Component: Root,
     },
-  ],
-  {
-    basename: import.meta.env.BASE_URL,
-  }
+  ]
 );
